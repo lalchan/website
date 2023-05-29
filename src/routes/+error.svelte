@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Typewriter from '../components/typewriter.svelte';
+	import Typewriter from '../lib/typewriter.svelte';
 	import { page } from '$app/stores';
 </script>
 

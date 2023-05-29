@@ -48,7 +48,7 @@
 	</nav>
 {:else}
 	<div
-		class="h-16 w-full fixed top-0 bg-transparent"
+		class="h-16 w-full fixed top-0 bg-transparent z-50"
 		on:mouseenter={() => (show = true)}
 		on:mouseleave={() => (show = false)}
 	/>
