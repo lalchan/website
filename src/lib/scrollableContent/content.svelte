@@ -3,6 +3,7 @@
 	import type { ScrollableTextContent } from './scrollContent';
 
 	export let props: ScrollableTextContent;
+	export let id: string;
 	export let onHide: Function;
 	export let onShow: Function;
 	let content: Element;
@@ -20,7 +21,11 @@
 	});
 </script>
 
-<div bind:this={content} class="h-screen px-16 text-primary">
+<div
+	bind:this={content}
+	class="h-screen px-16 text-primary scroll-mt-[6rem]"
+	{id}
+>
 	<div class="text-4xl capitalize">
 		{props.title}
 	</div>

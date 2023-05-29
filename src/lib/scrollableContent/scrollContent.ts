@@ -6,6 +6,7 @@ export interface ScrollableTextContent {
 }
 
 export interface ScrollableContent {
+	id: string;
 	props: ScrollableTextContent;
 	image: ScrollableImage;
 }

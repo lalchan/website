@@ -25,7 +25,7 @@
 	<div>footer content here</div>
 	{#if showSocials}
 		<div
-			class="fixed right-0 bottom-0 bg-tertiary h-fit w-fit p-4 rounded-3xl m-4"
+			class="fixed right-0 bottom-0 bg-secondary text-tertiary h-fit w-fit p-4 rounded-3xl m-4"
 			transition:slide={{
 				duration: animationTime,
 				easing: cubicInOut,

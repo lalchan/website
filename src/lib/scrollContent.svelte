@@ -14,9 +14,10 @@
 
 <div class="flex w-full py-4">
 	<div class="w-1/2">
-		{#each contents as { props, index } (index)}
+		{#each contents as { id, props, index } (index)}
 			<Content
 				{props}
+				{id}
 				onHide={() => {
 					const _image = handler.setVisible(index, false);
 					if (_image) {
