@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="px-4 flex flex-row items-center rounded-3xl bg-fixed bg-[url('images/main_bg.jpeg')] bg-cover h-[calc(100vh-2rem)]"
+	class="px-4 flex flex-row items-center rounded-3xl bg-fixed bg-[url('/images/main_bg.jpeg')] bg-cover h-[calc(100vh-2rem)]"
 >
 	<div
 		class="h-full w-1/2 text-9xl text-left flex flex-col text-primary justify-center"

@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="h-[calc(100vh-4rem)] text-primary w-full p-4 z-50 bg-base bg-fixed bg-[url('../images/main_bg.jpeg')] bg-cover"
+	class="h-[calc(100vh-4rem)] text-primary w-full p-4 z-50 bg-base bg-fixed bg-[url('/images/main_bg.jpeg')] bg-cover"
 	bind:this={content}
 >
 	<div>footer content here</div>
