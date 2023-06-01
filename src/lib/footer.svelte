@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
+	import Socialmedia from './socialMedia.svelte';
 	let showSocials: boolean = false;
 	const animationTime: number = 200;
 	let content: Element;
@@ -31,7 +32,7 @@
 				easing: cubicInOut,
 			}}
 		>
-			<p>social media here</p>
+			<Socialmedia />
 		</div>
 	{/if}
 </div>
