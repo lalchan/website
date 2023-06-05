@@ -10,7 +10,7 @@
 <svelte:window bind:scrollY={y} bind:outerHeight={screenSize} />
 
 <Navbar {screenSize} {y} />
-<main class="bg-tertiary justify-center min-h-screen p-4 drop-shadow-lg">
+<main class="bg-black justify-center min-h-screen p-4 drop-shadow-lg">
 	<slot />
 </main>
 

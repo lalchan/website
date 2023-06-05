@@ -20,13 +20,13 @@
 </script>
 
 <div
-	class="h-[calc(100vh-4rem)] text-primary w-full p-4 z-50 bg-base bg-fixed bg-[url('/images/main_bg.jpeg')] bg-cover"
+	class="h-[calc(100vh-4rem)] text-teal-500 w-full p-4 z-50 bg-fixed bg-[url('/images/main_bg.jpeg')] bg-cover"
 	bind:this={content}
 >
 	<div>footer content here</div>
 	{#if showSocials}
 		<div
-			class="fixed right-0 bottom-0 bg-secondary text-tertiary h-fit w-fit p-4 rounded-3xl m-4"
+			class="fixed right-0 bottom-0 bg-neutral-900 h-fit w-fit p-4 rounded-3xl m-4"
 			transition:slide={{
 				duration: animationTime,
 				easing: cubicInOut,

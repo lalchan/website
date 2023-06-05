@@ -23,10 +23,10 @@
 
 <div
 	bind:this={content}
-	class="h-screen px-16 text-primary scroll-mt-[6rem]"
+	class="h-screen px-16 text-teal-500 scroll-mt-[6rem] bg-neutral-900 mr-4 rounded-3xl py-4"
 	{id}
 >
-	<div class="text-4xl capitalize">
+	<div class="text-4xl capitalize text-center w-full my-12">
 		{props.title}
 	</div>
 	<div>

@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<div class="text-6xl h-screen w-full flex flex-col items-center text-primary">
+<div class="text-6xl h-screen w-full flex flex-col items-center text-teal-500">
 	<div class="w-[40%] h-[60%] flex items-center justify-center">
 		<div class="flex flex-wrap items-center justify-center">
 			<Typewriter

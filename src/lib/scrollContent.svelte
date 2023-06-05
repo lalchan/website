@@ -12,8 +12,8 @@
 	let imageContent: ScrollableImage = handler.getImage();
 </script>
 
-<div class="flex w-full py-4">
-	<div class="w-1/2">
+<div class="flex w-full pt-4">
+	<div class="w-1/2 gap-4 flex flex-col">
 		{#each contents as { id, props, index } (index)}
 			<Content
 				{props}
@@ -34,7 +34,7 @@
 		{/each}
 	</div>
 	<div
-		class={`w-1/2 bg-base flex justify-center items-center sticky right-0 top-20 max-h-[calc(100vh-6rem)] rounded-3xl`}
+		class={`w-1/2 bg-neutral-900 flex justify-center items-center sticky right-0 top-20 max-h-[calc(100vh-6rem)] rounded-3xl`}
 	>
 		<Image image={imageContent} />
 	</div>
