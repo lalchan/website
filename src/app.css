@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+    background: #65a30d;
+}
+
+a {
+    background: #65a30d;
+    padding: 0.25rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

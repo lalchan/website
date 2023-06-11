@@ -1,27 +1,52 @@
 <script lang="ts">
-	import Typewriter from '$lib/typewriter.svelte';
-	import ScrollableContent from '$lib/scrollContent.svelte';
-	export let data;
+	import Banner from '$lib/banner.svelte';
+	import Lander from '$lib/lander.svelte';
+	import { icons } from 'feather-icons';
+	let contents: any[] = [
+		{
+			image: {
+				hover: 'https://meropadhai.com/images/landing-page/meropadhai-laptop-phone.png',
+				main: 'https://meropadhai.com/images/mero-padhai-main-logo.svg',
+			},
+			text: {
+				title: 'MeroPadhai',
+			},
+			link: 'https://meropadhai.com/',
+		},
+		{
+			image: {
+				hover: 'https://www.restrox.co/images/hero-img.svg',
+				main: 'https://www.restrox.co/logo/RestroXLogo.png',
+			},
+			text: {
+				title: 'RestroX',
+			},
+			link: 'https://www.restrox.co/',
+		},
+		// { image: 'image3', text: 'text3' },
+	];
 </script>
 
-<div
-	class="px-4 flex flex-row items-center rounded-3xl bg-fixed bg-[url('/images/main_bg.jpeg')] bg-cover h-[calc(100vh-2rem)]"
->
-	<div
-		class="h-full w-1/2 text-9xl text-left flex flex-col text-teal-500 justify-center"
-	>
-		<Typewriter speed={1} content={'Hello World!'} bg={'bg-transparent'} />
-	</div>
-	<div class="flex align-center justify-end">
-		<p class="h-full text-teal-500 w-1/2 text-right">
-			I am <span class="font-bold">Adarsha Lalchan</span>, a NodeJs
-			developer who specializes in backend technology. I currently am
-			working in Clinchtech.
+<Lander />
+
+{#each contents as content}
+	<Banner image={content.image}>
+		<h1 class="text-2xl">
+			{content.text.title}
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A expedita
+			molestiae, libero cum dignissimos natus nisi fuga sequi enim
+			aspernatur minima error illum harum eius maiores recusandae.
+			Assumenda, soluta iusto?
 		</p>
-	</div>
-</div>
-
-<ScrollableContent content={data.scrollContent} />
-
-<style>
-</style>
+		<a
+			href={content.link}
+			class="bg-transparent w-fit h-fit block absolute right-2 bottom-2 hover:bg-lime-600"
+			>{@html icons['external-link'].toSvg({
+				width: '1.5rem',
+				height: '1.5rem',
+			})}</a
+		>
+	</Banner>
+{/each}

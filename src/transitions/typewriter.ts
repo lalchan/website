@@ -1,4 +1,4 @@
-export function typewriter(node: Element, { speed = 1 }) {
+export function typewriter(node: Element, { duration = 3000 }) {
 	const text = node.textContent?.trim();
 
 	if (!text) {
@@ -6,13 +6,13 @@ export function typewriter(node: Element, { speed = 1 }) {
 			`This transition only works on elements with a text content`,
 		);
 	}
-	const duration = text.length / (speed * 0.005);
-
 	return {
 		duration,
 		tick: (t: number) => {
 			const i = Math.ceil(text.length * t);
-			node.textContent = text.slice(0, i);
+
+			node.textContent =
+				text.slice(0, i) + (i === text.length ? '' : '_');
 		},
 	};
 }

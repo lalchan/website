@@ -1,19 +1,15 @@
 <script lang="ts">
-	import '../app.css';
-	import Navbar from '$lib/navbar.svelte';
 	import Footer from '$lib/footer.svelte';
-
-	let y: number = 0;
-	let screenSize: number;
+	import '../app.css';
 </script>
 
-<svelte:window bind:scrollY={y} bind:outerHeight={screenSize} />
-
-<Navbar {screenSize} {y} />
-<main class="bg-black justify-center min-h-screen p-4 drop-shadow-lg">
-	<slot />
+<main
+	class="bg-neutral-50 dark:bg-neutral-950 items-center font-mono flex flex-col dark:text-white select-text w-screen h-screen"
+>
+	<div
+		class="w-full lg:w-3/4 bg-neutral-100 dark:bg-neutral-900 grid grid-cols-1 items-center p-4 drop-shadow-2xl overflow-auto min-h-screen"
+	>
+		<slot />
+		<Footer />
+	</div>
 </main>
-
-<footer>
-	<Footer />
-</footer>
